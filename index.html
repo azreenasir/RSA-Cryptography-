@@ -231,24 +231,6 @@
     </form>
 
     <script>
-    // Function to generate random prime numbers within a specified range
-    function generateRandomPrime(min, max) {
-      let primes = [];
-      for (let num = min; num <= max; num++) {
-        let prime = true;
-        for (let i = 2; i <= Math.sqrt(num); i++) {
-          if (num % i === 0) {
-            prime = false;
-            break;
-          }
-        }
-        if (prime) {
-          primes.push(num);
-        }
-      }
-      return primes[Math.floor(Math.random() * primes.length)];
-    }
-
     // Function to calculate the greatest common divisor (GCD) of two numbers
     function calculateGCD(a, b) {
       if (b === 0) {
@@ -319,6 +301,7 @@
       }
 
       document.getElementById("encryptedMessage").value = encryptedMessage;
+      console.log(encryptedMessage);
     }
 
     // Function to decrypt a message using the public key
